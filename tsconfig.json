@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "module": "commonjs",
+        "target": "esnext",
+        "jsx": "react",
+        "lib": ["dom", "es2015", "es2017"],
+        "allowJs": false
+    },
+    "include": [
+        "./components/**/*",
+        "./pages/**/*",
+        "./stories/**/*"
+    ],
+    "typeRoots": [
+        "node_modules/@types",
+        "../@types"
+    ]
+}
