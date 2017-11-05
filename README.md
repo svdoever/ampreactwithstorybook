@@ -5,7 +5,7 @@
 ## About
 
 The core of `ampreact` is built on [Next.js][next], used for all the routing and
-serving of pages. For styling, [`styled-components`][styled] makes it easy—with
+serving of pages. For styling, [`styled-components`][styled] makes it easy — with
 just a small modification to the rendering of the `<style />` tags generated,
 it works nicely with [AMP HTML][amp]. Finally, [`react-amphtml`][react-amphtml]
 is used for rendering all of the [AMP HTML][amp] built-ins, extensions, and
@@ -14,6 +14,9 @@ the `<script />` tags needed to use them.
 The pages generated should all be properly validated by [AMP HTML][amp] 💯
 
 ## Usage
+
+The easiest way to get started for development on Windows is to install [ConEmu](https://conemu.github.io/) (64 bit) and run the script ```start-dev.bat```.
+ConEmu is a Windows console emulator that supports tabs and screen splits. The script will start a ConEmu window with 4 tabs for: Nextjs, TypeScript compilation, Storybook and an interactive console window.
 
 All the usage and benefits of [Next.js][next] are available to `ampreact`.
 
@@ -35,6 +38,11 @@ All the usage and benefits of [Next.js][next] are available to `ampreact`.
     npm run build
     npm run start
     ```
+## Development
+
+### Ststic assets
+
+For both Storybook and Next.js the folder ```./static``` is the root of static files. 
 
 ## Example & Validation
 

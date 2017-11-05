@@ -1,8 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import ImageWithHeading from '../components/ImageWithHeading';
-import ampJpg from './amp.jpg';
+import ImageWithHeading from '../components/ImageWithHeading/ImageWithHeading';
 
 storiesOf('Button', module)
   .add('with text', () => (
@@ -14,7 +13,7 @@ storiesOf('Button', module)
 storiesOf('ImageWithHeading', module)
   .add('with text', () => (
      <ImageWithHeading 
-        src={ampJpg} 
+        src="/img/amp.jpg" 
         width='1280' 
         height='853' 
         alt='Beautiful Image of a rectangle' 

@@ -1,5 +1,11 @@
+!/pages/_document.js
+!/.storybook
+!/stories
+
 .DS_Store
 /node_modules
+/dist
 /.next
-/.dist
+*.js
+*.js.map
 yarn-error.log

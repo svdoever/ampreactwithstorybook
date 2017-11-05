@@ -8,7 +8,8 @@ module.exports = (baseConfig, env) => {
   // Extend it as you need.
 
   // For example, add typescript loader:
-  config.module.rules.push({
+  config.module.rules.push(
+  {
     test: /\.(ts|tsx)$/,
     include: [
         path.resolve(__dirname, '../components'),
@@ -16,8 +17,13 @@ module.exports = (baseConfig, env) => {
         path.resolve(__dirname, '../stories')
     ],
     loader: require.resolve('ts-loader')
+  }, {
+    test: /\.(jpe?g|gif|png|svg)$/, 
+    loader: "file-loader"
   });
   config.resolve.extensions.push('.ts', '.tsx');
+
+  config.resolve.alias['ampreact'] =  path.resolve(__dirname, '../components')
 
   return config;
 };
