@@ -2,41 +2,25 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import ImageWithHeading from '../components/ImageWithHeading/ImageWithHeading';
+import {ImageWithHeading} from '../components/ImageWithHeading/ImageWithHeading.tsx';
 import {Helmet} from 'react-helmet';
 import {
   AmpScripts,
   AmpScriptsManager,
   headerBoilerplate
 } from 'react-amphtml';
-import { ServerStyleSheet } from 'styled-components';
+//import { StyleSheet } from 'styled-components';
 
 
 const AmpDecorator = (storyFn) => {
   const ampScripts = new AmpScripts();
-  const sheet = new ServerStyleSheet();
-
-  // ReactDOM.render(
-  //   <div>
-  //   {
-  //     sheet.collectStyles(
-  //       <AmpScriptsManager ampScripts={ampScripts}>
-  //         { storyFn() }
-  //       </AmpScriptsManager>
-  //     )
-  //   }
-  // </div>,
-  //   dummyDiv
-  // );
-
   var dummyDiv = document.createElement('div');
-  
   ReactDOM.render(
     <div>
         <AmpScriptsManager ampScripts={ampScripts}>
           { storyFn() }
         </AmpScriptsManager>
-  </div>,
+    </div>,
     dummyDiv
   );
 

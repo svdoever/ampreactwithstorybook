@@ -4,6 +4,7 @@
         "sourceMap": true,
         "noImplicitAny": true,
         "allowSyntheticDefaultImports": true,
+        "strictNullChecks": true,
         "module": "commonjs",
         "target": "esnext",
         "jsx": "react",

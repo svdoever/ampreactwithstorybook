@@ -73,5 +73,5 @@ exports.default = () => (React.createElement(Container, null,
             React.createElement("figure", null,
                 React.createElement(react_amphtml_1.Amp.Img, { src: "/static/img/amp.jpg", width: 1080, height: 610, layout: "responsive", alt: "an image" }),
                 React.createElement("figcaption", null, "Images work as well.")))),
-    React.createElement(ImageWithHeading_1.default, { src: '/static/img/amp.jpg', width: 200, height: 100, alt: 'Beautiful Image of a rectangle', heading: 'Views from Space' })));
+    React.createElement(ImageWithHeading_1.ImageWithHeading, { src: '/static/img/amp.jpg', width: 200, height: 100, alt: 'Beautiful Image of a rectangle', heading: 'Views from Space' })));
 //# sourceMappingURL=index.js.map

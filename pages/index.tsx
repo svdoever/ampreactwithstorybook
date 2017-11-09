@@ -2,11 +2,11 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Amp } from 'react-amphtml';
 import styled from 'styled-components';
-import ImageWithHeading from '../components/ImageWithHeading/ImageWithHeading';
+import {ImageWithHeading} from '../components/ImageWithHeading/ImageWithHeading';
 
 declare module 'react' {
   interface HTMLAttributes<T> {
-     expanded? : boolean;
+     expanded? : any;
   }
 }
 
