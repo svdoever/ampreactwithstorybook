@@ -6,7 +6,7 @@ import ImageWithHeading from '../components/ImageWithHeading/ImageWithHeading';
 
 declare module 'react' {
   interface HTMLAttributes<T> {
-     expanded? : any;
+     expanded? : boolean;
   }
 }
 
