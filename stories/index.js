@@ -14,8 +14,8 @@ storiesOf('ImageWithHeading', module)
   .add('with text', () => (
      <ImageWithHeading 
         src="/img/amp.jpg" 
-        width='1280' 
-        height='853' 
+        width={1280} 
+        height={853} 
         alt='Beautiful Image of a rectangle' 
         heading='Views from OuterSpace and back'/>
   ));

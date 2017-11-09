@@ -1,0 +1,19 @@
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
+module.exports = {
+    webpack: function (config) {
+      if (true) {
+        config.plugins.push(new BundleAnalyzerPlugin({
+          analyzerMode: 'server',
+          analyzerPort: 8888,
+          openAnalyzer: true
+        }))
+      }
+  
+      return Object.assign({}, config, { entry: function() {
+        return config.entry().then((entry) => {
+          return Object.assign({}, entry, { '../static/worker.js': './Worker'})
+        })
+      }})
+    }
+  }

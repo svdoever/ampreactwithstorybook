@@ -1,0 +1,1 @@
+/// <reference path="react-amphtml/index.d.ts" />

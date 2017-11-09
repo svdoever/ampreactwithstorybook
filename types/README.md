@@ -1,0 +1,2 @@
+This folder contains type definitions for our own code and for third party modules.
+Use the approach described in https://alexzywiak.github.io/writing-typescript-typings-files-for-third-party-modules/index.html to generate the required interfaces.

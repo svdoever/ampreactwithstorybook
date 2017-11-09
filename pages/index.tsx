@@ -17,7 +17,7 @@ const Container = styled.div`
 `;
 
 const StyledAmpImg = styled(Amp.Img)`
-  filter: ${(props) => {
+  filter: ${(props: any) => {
     switch (props['data-filter']) {
       case 1:
         return 'blur(10px)';
@@ -93,15 +93,15 @@ export default () => (
       {[...Array(6)].map((v, index) => (
         <StyledAmpImg
           data-filter={index}
-          src="/static/amp.jpg"
-          width="1080"
-          height="610"
+          src="/static/img/amp.jpg"
+          width={1080}
+          height={610}
           alt="AMP"
         />
       ))}
     </Amp.Carousel>
     <Amp.Accordion>
-      <section expanded="yes">
+      <section expanded> 
         <h4>Section 1</h4>
         <p>Bunch of awesome content.</p>
       </section>
@@ -114,16 +114,16 @@ export default () => (
         <h4>Section 3</h4>
         <figure>
           <Amp.Img 
-            src="/static/amp.jpg"
-            width="1080"
-            height="610"
+            src="/static/img/amp.jpg"
+            width={1080}
+            height={610}
             layout="responsive"
             alt="an image"></Amp.Img>
           <figcaption>Images work as well.</figcaption>
         </figure>
       </section>
     </Amp.Accordion>
-    <ImageWithHeading src='/static/amp.jpg' width='200' height='100' alt='Beautiful Image of a rectangle' heading='Views from Space'/>
-  </Container>
+    <ImageWithHeading src='/static/img/amp.jpg' width={200} height={100} alt='Beautiful Image of a rectangle' heading='Views from Space'/>
+  </Container> 
 
 );

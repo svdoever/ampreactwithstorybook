@@ -1,0 +1,33 @@
+var path = require('path');
+var merge = require('webpack-merge');
+
+module.exports = {
+  webpack: function(config, {dev}) {
+    var newConfig = merge(config, {
+      module: {
+        rules: [
+          {
+            test: /\.(ts|tsx)$/,
+            include: [
+                path.resolve(__dirname, './components'),
+                path.resolve(__dirname, './pages'),
+                path.resolve(__dirname, './stories'),
+            ],
+            loader: require.resolve('ts-loader')
+          }, {
+            test: /\.(jpe?g|gif|png|svg)$/, 
+            loader: "file-loader"
+          }
+        ]
+      },
+      resolve: {
+        extensions: ['.ts', '.tsx']
+      }
+    });
+
+    const configString = JSON.stringify(newConfig, null, 2);
+    console.log(configString);
+
+    return newConfig
+  }
+}
